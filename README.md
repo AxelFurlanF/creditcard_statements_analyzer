@@ -1,5 +1,10 @@
 # Credit Card Statements Analyzer
 
+## What's this?
+I've spent quite a lot of money recently and I wanted to find out what did I spend it on. My bank doesn't give me my credit card statements in an analyzable format like csv or txt to run some data analysis on it, so I decided to just load the PDF files and analyze them with ChatGPT.
+
+This code grabs your pdf statements, parses them with ChatGPT and writes csvs with just 2 columns, category and amount. My goal was to perform very simple analysis on the categories.
+
 ## How to run
 Set `OPENAI_ORGANIZATION` environment variable with your OpenAI org.
 
