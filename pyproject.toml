@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "analyze-my-creditcard-spending"
+version = "0.1.0"
+description = ""
+authors = ["Axel Furlan <axel.furlan@toptal.com>"]
+readme = "README.md"
+packages = [{include = "analyze_my_creditcard_spending"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+PyPDF2 = "^3.0.1"
+pandas = "^2.1.4"
+openai = "^1.3.8"
+ipython = "^8.18.1"
+jupyter = "^1.0.0"
+matplotlib = "^3.8.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
