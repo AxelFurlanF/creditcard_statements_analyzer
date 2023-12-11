@@ -227,5 +227,5 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode,macos
 
-statement_pdfs/
-*.csv
+statement_pdfs/*.pdf
+results/*.csv

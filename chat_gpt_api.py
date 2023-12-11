@@ -1,7 +1,8 @@
 from openai import OpenAI
+import os
 
 client = OpenAI(
-    organization='org-fHxX4JFL89k7SQ8SgCfGqTYD',
+    organization=os.environ['OPENAI_ORGANIZATION'],
 )
 
 
@@ -20,16 +21,13 @@ def organize_pdf_text(response_text):
 
             I'll give you the text on the next message. Respond to that message with the csv."""},
             {"role": "user", "content": response_text}
-        ]
+        ],
+        temperature=0.0,
     )
     return complete_text.choices[0].message.content
 
 
 def ask_gpt_for_spendings(text_pages):
-    # user_messages = []
-    # for pdf_text in text_pages:
-    #     user_messages.append({"role": "user", "content": pdf_text})
-
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
